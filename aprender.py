@@ -93,3 +93,93 @@ if has_ticket:
     print("You may enter")
 else:
     print("You need a ticket")
+
+# Logical operators 
+
+temp = 25
+is_raining = False
+
+if temp > 35 or temp < 0 or is_raining: # or clause 
+    print("The event is canceled")
+else:
+    print("Its still on")
+
+temp = 25
+is_sunny = True 
+
+if temp >= 28 and is_sunny: # Both conditions must be true 
+    print("It is hot outside")
+    print("It is sunny")
+elif temp <= 0 and is_sunny:
+    print("It is cold")
+    print("It is sunny")
+elif temp < 28 and temp > 0 and is_sunny:
+    print("It is warm")
+    print("It is sunny")
+
+if temp >= 28 and is_sunny: # 
+    print("It is hot outside")
+    print("It is sunny")
+elif temp <= 0 and not is_sunny:
+    print("It is cold")
+    print("It is sunny")
+elif temp < 28 and temp > 0 and not is_sunny:
+    print("It is warm")
+    print("It is sunny")
+
+
+# Wile loop
+
+name = input("Enter your name ")
+while name == "":
+    name = input("Enter your name ")
+age = int(input("How old are you?"))
+
+while age < 0:
+    print("Age cannot be less than 0")
+    input("How old are you?")
+print(f"Helo {name}")
+print(f"You are {age} years old")
+
+# for loops 
+
+for i in range(1, 11, 2): # counts 1 - 10 first number inclsive second exclusive and counting by 2
+    print(i)
+
+name = "Eugene"
+
+for letter in name: # prints every letter 
+    print(letter, end=" ")
+
+# List [] can change elements 
+# Tuple () cannot change elements 
+# Set {} can change, no order, best for membership testing
+
+fruits = ["apple", "banna", "quenepa"]
+print(fruits[2])
+
+fruits.append(input("Enter a fruit: "))
+fruits.remove(input("Choose one to dieee: "))
+fruits.clear()
+
+for fruit in fruits:
+    print(fruit, end=" ")
+
+fruits = ("apple", "banna", "quenepa")
+
+for fruit in fruits:
+    print(fruit, end=" ")
+fruits.append(mango) # will crash out 
+
+
+fruits = {"apple", "banna", "quenepa"}
+fruits.add("mango")
+fruits.remove("apple")
+
+for fruit in fruits:
+    print(fruit, end=" ")
+
+if "apple" in fruits:
+    print(f"{fruit} was found")
+else:
+    print(f"{fruit} was not found")
