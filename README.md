@@ -1,4 +1,4 @@
-Learning basic pythhon principals with the bro code 1 hour tutorial
+
 
 Items covered:
 #1 print()
